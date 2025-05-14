@@ -118,22 +118,68 @@
   line-height: 1.4;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .logo img {
+    height: 200px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width: 640px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
 
 
 
   </style>
 </head>
 <body>
-  <header>
+<header>
     <nav>
-      <a href='#features'>Funciones</a>
-      <a href='#screenshots'>App</a>
-      <a href='#pricing'>Planes</a>
+        <a href="#home" class="logo">
+            <img src="./assets/oscurosinfondo.png" alt="FacturaScan logo">
+        
+        </a>
+        <div class="nav-links">
+            <a href="#features">Funciones</a>
+            <a href="#screenshots">App</a>
+            <a href="#pricing">Planes</a>
+        </div>
     </nav>
     <h1>FacturaScan</h1>
     <p>Procesa, organiza y analiza tus facturas con tecnología de visión por computadora en la nube.</p>
     <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Ver planes</button>
-  </header>
+</header>
+
 
   <section id='features'>
     <div class='feature-card'>
